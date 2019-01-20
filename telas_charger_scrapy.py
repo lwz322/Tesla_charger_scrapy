@@ -9,11 +9,11 @@ import re
 BASE_URL="https://www.tesla.com"
 LIST_URL="https://www.tesla.com/findus/list"
 #chargers or superchargers
-CHARER_TYPE="superchargers"
+CHARER_TYPE="chargers"
 #这里需要自己结合网页上的地名修改
 REGION="United+States"
 
-filename="tesla_"+CHARER_TYPE+".xls"
+filename=REGION+"./tesla_"+CHARER_TYPE+".xls"
 region_url = LIST_URL+"/"+CHARER_TYPE+"/"+REGION
 
 data_got = 0
@@ -71,4 +71,4 @@ for suffix_sub_region in suffix_sub_regions:
 
 #直接把结果保存在当前目录下的xls文件里面
 book.save(filename)
-print('Finished,totally got %d Charger Station,and %d Error'% (data_got,data_error))
+print('Finished,totally got %d Charging Station,and %d Error'% (data_got,data_error))
