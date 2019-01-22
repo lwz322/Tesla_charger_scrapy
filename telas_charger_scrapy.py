@@ -4,7 +4,6 @@ import xlwt
 import requests
 import re
 #从Tesla的美国官网获得美国境内的的充电桩位置信息，再由地图导出经纬度信息
-##获取网页的源代码
 
 BASE_URL="https://www.tesla.com"
 LIST_URL="https://www.tesla.com/findus/list"
